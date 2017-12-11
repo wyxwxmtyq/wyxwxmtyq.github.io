@@ -149,19 +149,29 @@ margin-bottom:3px;
 border:#900 2px solid;
 margin-top:-390px;
 }
-    .swiper-container {
-        width: 733px;
-        height: 333px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        margin-left: -365px;
-        margin-top: -50px;
+	 .swiper-container {
+        width: 100%;
+        height: 100%;
+        
     }
     .swiper-slide {
-        background-position: center;
-        background-size: cover;
-    }
+        text-align: center;
+        font-size: 18px;
+        background:#900;
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;}
 #container {
 width:1100px;
 height:1542px;
@@ -524,11 +534,14 @@ border:2px #900 solid;
             <div class="swiper-slide"><img src="picture2/中式.jpg" width="733" height="333"></div>
             <div class="swiper-slide"><img src="picture2/白.jpg" width="733" height="333"></div>
             <div class="swiper-slide"><img src="picture2/童话.jpg" width="733" height="333"></div>
-  </div> 
-  </div>
+   </div>
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        </div>
+        <div class="swiper-pagination"></div>                                                              
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+ </div>
 
   <div id="container">
     <div id="mainBox">
@@ -612,25 +625,20 @@ border:2px #900 solid;
      <div><img src="picture2/footer-3.jpg"></div>
   </div>
 </div>
-    <!-- Swiper JS -->
+       <!-- Swiper JS -->
     <script src="js/js1.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
-        effect: 'cube',
-        grabCursor: true,
-		autoplay: 2500,
-        autoplayDisableOnInteraction: false,
-	    slidesPerView: 1,
-		loop: true,
-        cube: {
-            shadow: true,
-            slideShadows: true,
-            shadowOffset: 20,
-            shadowScale: 0.94
-        }
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2000,
+        autoplayDisableOnInteraction: false,loop:1
     });
     </script>
 </body>
